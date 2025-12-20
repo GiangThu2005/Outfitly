@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Outfitly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hoso.css">
+</head>
+<body>
+
+    <header class="header">
+        <p class="logo">OUTFITLY</p>
+    </header>
+    
+    <div class="page-header">
+        <a href="dangnhap.html" class="back-btn">❮</a>
+        <h1>Đổi mật khẩu</h1>
+    </div>
+    
+    <div class="body-avatar">
+        <img src="assets/icons/ninhduonglanngoc.jpg" alt="Avatar">
+    </div>
+
+    <div class="profile-card">
+        <div class="profile-info">
+            <h3>Cao Quý Lâm</h3>
+            <p>ID: 25030024</p>
+        </div>
+    </div>
+
+    <div class="password-form">
+
+        <label>Nhập Mật Khẩu Hiện Tại:</label>
+        <div class="password-field">
+            <input type="password" id="currentPassword">
+            <span class="eye" onclick="togglePassword('currentPassword', this)">👁</span>
+        </div>
+
+        <label>Mật Khẩu Mới:</label>
+        <div class="password-field">
+            <input type="password" id="newPassword">
+            <span class="eye" onclick="togglePassword('newPassword', this)">👁</span>
+        </div>
+
+        <label>Xác Nhận Mật Khẩu Mới:</label>
+        <div class="password-field">
+            <input type="password" id="confirmPassword">
+            <span class="eye" onclick="togglePassword('confirmPassword', this)">👁</span>
+        </div>
+
+        <div class="update-btn dark" onclick="changePassword()">
+            Đổi mật khẩu
+        </div>
+
+    </div>
+
+  </main>
+  <script>
+        function togglePassword(inputId, el) {
+            const input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+                el.style.opacity = "0.5";
+            } else {
+                input.type = "password";
+                el.style.opacity = "1";
+            }
+        }
+
+        function changePassword() {
+            const current = document.getElementById('currentPassword').value;
+            const newPass = document.getElementById('newPassword').value;
+            const confirm = document.getElementById('confirmPassword').value;
+
+            if (!current || !newPass || !confirm) {
+                alert("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+
+            if (newPass !== confirm) {
+                alert("Mật khẩu xác nhận không khớp");
+                return;
+            }
+
+            const btn = document.querySelector('.update-btn');
+            btn.innerText = "Đang xử lý...";
+            btn.style.pointerEvents = "none";
+
+            setTimeout(() => {
+                btn.innerText = "Đổi mật khẩu thành công ✔";
+                btn.style.background = "#2D4255";
+                btn.style.color = "white";
+            }, 800);
+        }
+    </script>
+</body>
+</html>

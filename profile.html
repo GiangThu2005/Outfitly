@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outfitly</title>
+  <link rel="stylesheet" href="css/congdong.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="profile-page">
+
+  <header class="header">
+    <h1 class="logo">OUTFITLY</h1>
+  </header>
+  
+  <!-- Menu Button -->
+  <a href="settings.html" class="menu-button">
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="9" y1="13" x2="36" y2="13" stroke="#2d4255" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9" y1="22.5" x2="36" y2="22.5" stroke="#2d4255" stroke-width="2" stroke-linecap="round"/>
+      <line x1="9" y1="32" x2="36" y2="32" stroke="#2d4255" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </a>
+
+  <!-- Profile Section -->
+  <main class="profile-content">
+    <div class="profile-header">
+      <div class="profile-avatar-container">
+        <div class="profile-avatar-large">
+          <img src="assets/icons/User_cicrle_duotone.png" alt="Avatar">
+        </div>
+        <div class="add-ring-large">
+          <img src="assets/icons/Add_ring_fill.png" alt="Ring">
+        </div>
+      </div>
+      <h1 class="profile-username">User200231584</h1>
+      <p class="profile-email">@hoangtttt@gmail.com</p>
+      <p class="profile-stats">2 người theo dõi . 5 đang theo dõi</p>
+      <button class="edit-profile-btn">Chỉnh sửa hồ sơ</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="profile-tabs">
+      <div class="tab-item active">
+        <span>Bài đăng của tôi</span>
+        <div class="tab-indicator"></div>
+      </div>
+      <div class="tab-item">
+        <span>Đã lưu</span>
+      </div>
+      <button class="search-icon-btn">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9.5" cy="9.5" r="7.5" stroke="#2d4255" stroke-width="1.5"/>
+          <path d="M15.5 15.5L19 19" stroke="#2d4255" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="profile-posts-grid">
+      <a href="outfit_1.html" class="profile-post-card">
+        <div class="profile-post-image">
+          <img src="assets/social/Casual.png" alt="Ngày đẹp trời">
+        </div>
+        <p class="profile-post-title">ngày đẹp trời</p>
+      </a>
+
+      <a href="outfit_1.html" class="profile-post-card">
+        <div class="profile-post-image">
+          <img src="assets/social/Basic.png" alt="Beautiful">
+        </div>
+        <p class="profile-post-title">Beautiful</p>
+      </a>
+
+      <a href="outfit_1.html" class="profile-post-card">
+        <div class="profile-post-image">
+          <img src="assets/social/Hello.jpg" alt="Hello">
+        </div>
+        <p class="profile-post-title">Hello</p>
+      </a>
+
+      <a href="outfit_1.html" class="profile-post-card">
+        <div class="profile-post-image">
+          <img src="assets/social/Working.png" alt="Working day">
+        </div>
+        <p class="profile-post-title">Working day!!!!!!!</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- NAVBAR -->
+    <nav class="bottom-nav">
+        
+        <!-- HOME -->
+        <a href="index.html" class="nav-item" aria-label="Home">
+            <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.628353 11.5735L12.4335 1.26843L24.2339 11.5735M13.303 22.6429H20.4263V11.7741L12.4335 4.78944L4.43601 11.7741V22.6429H10.556V15.8684H14.3063" stroke=currentColor stroke-width="1.911" stroke-miterlimit="10"/>
+                <path d="M1.62835 27.2684H23.6284" stroke=currentColor stroke-width="1.6088" stroke-linecap="square"/>
+            </svg>
+        </a>
+
+        <!-- SOCIAL -->
+        <a href="congdong.html" class="nav-item active" aria-label="Social">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 26.5832C21.1735 26.5832 26.5833 21.1733 26.5833 14.4999C26.5833 7.82646 21.1735 2.41656 14.5 2.41656C7.82657 2.41656 2.41668 7.82646 2.41668 14.4999C2.41668 21.1733 7.82657 26.5832 14.5 26.5832Z" stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.66664 3.625H10.875C8.51873 10.6817 8.51873 18.3183 10.875 25.375H9.66664" stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.125 3.625C20.4813 10.6817 20.4813 18.3183 18.125 25.375" stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.625 19.3333V18.125C10.6817 20.4813 18.3183 20.4813 25.375 18.125V19.3333" stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.625 10.8751C10.6817 8.51885 18.3183 8.51885 25.375 10.8751" stroke=currentColor stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- ADD -->
+        <a href="themanh.html" class="nav-item add" aria-label="Add">
+            <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.504 9V15.4233M15.504 15.4233V22M15.504 15.4233H22M15.504 15.4233H9" stroke=currentColor stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- CLOSET -->
+        <a href="tudo.html" class="nav-item" aria-label="Closet">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.625 3.61511C3.625 2.95325 4.16265 2.41669 4.82536 2.41669H24.1746C24.8375 2.41669 25.375 2.96685 25.375 3.61511V25.3849C25.375 26.0469 24.8374 26.5834 24.1746 26.5834H4.82536C4.16242 26.5834 3.625 26.0332 3.625 25.3849V3.61511ZM22.9583 13.2917V4.83335H6.04167V13.2917H22.9583ZM22.9583 15.7084H6.04167V24.1667H22.9583V15.7084ZM10.875 7.25002H18.125V9.66669H10.875V7.25002ZM10.875 18.125H18.125V20.5417H10.875V18.125Z" stroke=currentColor stroke-width="1.911" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
+        <!-- PROFILE -->
+        <a href="hoso.html" class="nav-item" aria-label="Profile">
+            <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.955505 21.2264V20.5814C0.955505 18.3172 1.85498 16.1457 3.45605 14.5446C5.05712 12.9435 7.22862 12.044 9.49288 12.044C11.7571 12.044 13.9286 12.9435 15.5297 14.5446C17.1308 16.1457 18.0302 18.3172 18.0302 20.5814V21.2264M13.5585 5.02115C13.5585 7.26654 11.7383 9.08679 9.49286 9.08679C7.24747 9.08679 5.42722 7.26654 5.42722 5.02115C5.42722 2.77576 7.24747 0.955505 9.49286 0.955505C11.7383 0.955505 13.5585 2.77576 13.5585 5.02115Z" stroke=currentColor stroke-width="1.911" stroke-miterlimit="10"/>
+            </svg>
+        </a>
+    </nav>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Outfitly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dangnhap.css">
+</head>
+<body>
+<header class="header">
+        <p class="logo">OUTFITLY</p>
+</header>
+
+<div class="phone-container">
+
+    
+  <div class="page-header">
+    <a href="dangnhap.html" class="back-btn">❮</a>
+    <h1>Đăng Ký</h1>
+  </div>
+    <form>
+        <label>Họ và Tên:</label>
+        <input type="text" placeholder="Nhập họ và tên">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Nhập email">
+
+        <label>Số Điện Thoại:</label>
+        <input type="tel" placeholder="Nhập số điện thoại">
+
+        <label>Ngày Sinh:</label>
+        <input type="date">
+
+        <label>Mật Khẩu:</label>
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+            <span class="eye" id="togglePassword">👁</span>
+        </div>
+
+        <label>Xác Nhận Mật Khẩu:</label>
+        <div class="password-box">
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+            <span class="eye" id="toggleConfirm">👁</span>
+        </div>
+
+        <button type="button" class="login-btn" onclick="location.href='dangnhap.html'">Đăng ký</button>
+    </form>
+
+    <div class="divider">hoặc Đăng ký với</div>
+
+    <div class="social-login">
+        <button class="social">
+            <img src="assets/icons/iconFacebook.png" alt="Facebook">
+        </button>
+        <button class="social">
+            <img src="assets/icons/iconChrome.png" alt="Google">
+        </button>
+    </div>
+
+    <p class="register">
+        Bạn đã có tài khoản?
+        <a href="dangnhap.html">Đăng nhập ngay</a>
+    </p>
+</div>
+
+<script>
+function toggle(inputId, toggleId) {
+    const input = document.getElementById(inputId);
+    const toggleIcon = document.getElementById(toggleId);
+
+    toggleIcon.addEventListener("click", () => {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        toggleIcon.textContent = isPassword ? "🙈" : "👁";
+    });
+}
+
+toggle("password", "togglePassword");
+toggle("confirmPassword", "toggleConfirm");
+</script>
+
+</body>
+</html>

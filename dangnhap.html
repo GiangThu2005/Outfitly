@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Outfitly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dangnhap.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <p class="logo">OUTFITLY</p>
+    </header>
+
+    <div class="phone-container">
+
+    <h1>Đăng Nhập</h1>
+
+    <div class="welcome">
+      <h2>Welcome</h2>
+      <p>Vui lòng điền các thông tin sau</p>
+    </div>
+
+    <form>
+      <label>SĐT hoặc Email:</label>
+      <input type="text" placeholder="Nhập SĐT hoặc Email">
+
+      <label>Mật Khẩu:</label>
+      <div class="password-box">
+        <input type="password" id="password" placeholder="Nhập mật khẩu">
+        <span class="eye" id="togglePassword">👁</span>
+      </div>
+
+      <button type="button" class="login-btn" onclick="location.href='index.html'">Đăng nhập</button>
+
+      <a href="doimatkhau.html" class="forgot">Quên Mật Khẩu?</a>
+    </form>
+
+    <div class="divider">hoặc Đăng nhập với</div>
+
+    <div class="social-login">
+  <button class="social">
+    <img src="assets/icons/iconFacebook.png" alt="Facebook">
+  </button>
+
+  <button class="social">
+    <img src="assets/icons/iconChrome.png" alt="Google">
+  </button>
+</div>
+
+    <p class="register">
+      Bạn không có tài khoản? <a href="dangky.html">Đăng ký ngay</a>
+    </p>
+  </div>
+<script>
+  const passwordInput = document.getElementById("password");
+  const togglePassword = document.getElementById("togglePassword");
+
+  togglePassword.addEventListener("click", () => {
+    const isPassword = passwordInput.type === "password";
+
+    passwordInput.type = isPassword ? "text" : "password";
+
+
+    togglePassword.textContent = isPassword ? "🙈" : "👁";
+    togglePassword.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
