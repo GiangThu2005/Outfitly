@@ -1,0 +1,459 @@
+* {
+  box-sizing: border-box;
+  font-family:'League Spartan', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 12px;
+    text-align: center;
+    background: #C7D9E5;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px
+}
+
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.search-box {
+  flex: 1;
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 20px;
+  padding: 0 16px;
+  margin-bottom: 12px;
+}
+
+.tabs span {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+}
+
+.tabs .active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.card .image-container {
+  width: 100%;
+  height: 220px;
+  background: #dbe5ea;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card p {
+  padding: 10px;
+  font-size: 14px;
+  height: 5%;
+}
+
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: white;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+.nav-item{
+    color: #C7D9E5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item.active{
+    color: #2D4255;
+}
+
+.nav-item.add{
+    width: 48px;
+    height: 48px;
+    margin-top: -10px;
+    background: #C7D9E5;
+    border-radius: 50%;
+    color: white;
+}
+
+.add-btn {
+  width: 48px;
+  height: 48px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn i {
+  color: #fff;
+  font-size: 22px;
+}
+
+/* Outfit Detail Page Styles */
+.outfit-detail-page {
+  background: #fffdfd;
+  padding-bottom: 100px;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 22px;
+  background: #fff;
+}
+
+.status-time {
+  font-size: 13px;
+  font-weight: 500;
+  color: #232323;
+  text-transform: capitalize;
+}
+
+.status-icons {
+  width: 56px;
+  height: 11px;
+}
+
+/* Outfit Detail Content */
+.outfit-detail-content {
+  padding: 0 16px;
+  position: relative;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  left: 17px;
+  z-index: 10;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 51px;
+  height: 51px;
+}
+
+.back-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Main Outfit Card */
+.main-outfit-card {
+  margin-top: 37px;
+  margin-bottom: 20px;
+}
+
+.outfit-image-container {
+  width: 100%;
+  height: 500px;
+  background: #dbe5ea;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outfit-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Interaction Bar */
+.interaction-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 21px;
+}
+
+.interaction-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.interaction-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #2d4255;
+  text-decoration: none;
+}
+
+.interaction-btn svg,
+.interaction-btn img {
+  width: 21px;
+  height: 21px;
+}
+
+.interaction-btn.like-btn.active .like-icon {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(7471%) hue-rotate(346deg) brightness(91%) contrast(87%);
+}
+
+.interaction-btn.like-btn.active svg path {
+  fill: #e74c3c;
+  stroke: #e74c3c;
+}
+
+.interaction-count {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d4255;
+}
+
+.interaction-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.more-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+}
+
+.save-btn {
+  background: #2d4255;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 85px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User Info Section */
+.user-info-section {
+  padding: 0 21px;
+  margin-bottom: 30px;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.user-avatar-container {
+  position: relative;
+  width: 29px;
+  height: 30px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 29px;
+  height: 30px;
+}
+
+.user-avatar svg {
+  width: 100%;
+  height: 100%;
+}
+
+.add-ring {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-ring svg {
+  width: 100%;
+  height: 100%;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.outfit-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2d4255;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.comment-preview {
+  font-size: 13px;
+  color: rgba(45, 66, 85, 0.54);
+}
+
+.comment-text {
+  color: rgba(45, 66, 85, 0.54);
+}
+
+.view-all-comments {
+  color: #2d4255;
+  margin-left: 4px;
+}
+
+/* Similar Outfits Section */
+.similar-outfits-section {
+  padding: 0 21px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d4255;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.similar-outfits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.similar-outfit-card {
+  overflow: hidden;
+}
+
+.similar-outfit-image {
+  width: 100%;
+  height: 220px;
+  background: #dbe5ea;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.similar-outfit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.similar-outfit-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2d4255;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
